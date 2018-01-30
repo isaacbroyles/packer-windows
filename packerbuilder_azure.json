@@ -19,7 +19,7 @@
       "subscription_id": "{{user `azure_subscription_id`}}",
       "tenant_id": "{{user `azure_ad_tenant_id`}}",
       "type": "azure-arm",
-      "vm_size": "Standard_E2_v3",
+      "vm_size": "Standard_E4s_v3",
       "winrm_insecure": "true",
       "winrm_timeout": "3m",
       "winrm_use_ssl": "true",
