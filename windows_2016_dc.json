@@ -144,7 +144,7 @@
     }
   ],
   "variables": {
-    "autounattend": "./answer_files/2016_core/Autounattend.xml",
+    "autounattend": "./answer_files/2016_dc/Autounattend.xml",
     "disk_size": "61440",
     "disk_type_id": "1",
     "headless": "false",
