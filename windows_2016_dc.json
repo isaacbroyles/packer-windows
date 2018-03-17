@@ -119,23 +119,6 @@
       "type": "windows-shell"
     },
     {
-      "inline": [
-        "Install-WindowsFeature AD-Domain-Services",
-        "Import-Module ADDSDeployment",
-        "Install-ADDSForest `",
-        "  -DomainName {{user `DomainName`}} `",
-        "  -DomainNetbiosName {{user `DomainNetbiosName`}} `",
-        "  -CreateDnsDelegation:$false -DatabasePath \"C:\\Windows\\NTDS\" `",
-        "  -DomainMode \"Win2012R2\" -ForestMode \"Win2012R2\" `",
-        "  -InstallDns:$true -LogPath \"C:\\Windows\\NTDS\" `",
-        "  -NoRebootOnCompletion:$true -SysvolPath \"C:\\Windows\\SYSVOL\" `",
-        "  -SafeModeAdministratorPassword (ConvertTo-SecureString `",
-        "    -String \"{{user `SafeModeAdministratorPassword`}}\" `",
-        "    -AsPlainText -Force) -Force:$true"
-      ],
-      "type": "powershell"
-    },
-    {
       "restart_timeout": "{{user `restart_timeout`}}",
       "type": "windows-restart"
     },
@@ -161,9 +144,6 @@
     }
   ],
   "variables": {
-    "DomainName": "windomain.local",
-    "DomainNetbiosName": "windom",
-    "SafeModeAdministratorPassword": "BadAdminPassword!",
     "autounattend": "./answer_files/2016_core/Autounattend.xml",
     "disk_size": "61440",
     "disk_type_id": "1",
